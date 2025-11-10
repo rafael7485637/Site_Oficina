@@ -1,0 +1,97 @@
+/* Container principal do slider */
+.container-slider {
+   display: flex;              /* organiza imagens e botões lado a lado */
+   justify-content: center;    /* centraliza horizontalmente */
+   align-items: center;        /* centraliza verticalmente */
+   min-height: 100vh;          /* ocupa toda a altura da tela */
+   gap: 1rem;                  /* espaço entre o slider e os botões */
+}
+
+/* Área das imagens */
+.container-images {
+    position: relative;        /* base para posicionar as imagens sobrepostas */
+    width: 1500px;
+    height: 700px;
+    overflow: hidden;          /* esconde partes da imagem que saem do limite */
+}
+
+/* Cada imagem do slider */
+.item {
+   position: absolute;         /* empilha todas as imagens */
+   width: 100%;
+   height: 100%;
+   opacity: 0;                 /* começa invisível */
+   transition: opacity 0.5s;   /* efeito de transição suave */
+   object-fit: cover;          /* cobre todo o espaço sem distorcer */
+   border-radius: 10px;
+}
+
+/* Imagem ativa (visível) */
+.item.active {
+   opacity: 1;
+}
+
+/* Botões de navegação */
+#prev-button, #next-button {
+   width: 40px;
+   height: 40px;
+   border: none;
+   background-color: rgba(255,255,255,0.7);
+   color: #333;               /* cor usada pela pseudo-seta (border-color: currentColor) */
+   border-radius: 50%;        /* formato circular */
+   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+   cursor: pointer;
+   display: flex;             /* centraliza a seta dentro do botão */
+   align-items: center;
+   justify-content: center;
+   transition: background-color 0.2s, color 0.2s;
+   z-index: 2;                /* fica acima das imagens */
+}
+
+/* Efeito ao passar o mouse */
+#prev-button:hover, #next-button:hover {
+   background-color: rgba(54,20,125,0.95);
+   color: #fff;
+}
+
+/* Se as setas forem imagens dentro dos botões */
+#prev-button img, #next-button img {
+   width: 60%;
+   height: 60%;
+   object-fit: contain;
+   display: block;
+}
+
+/* Container dos indicadores de slide */
+.slide-indicators {
+   position: absolute;
+   bottom: 20px;
+   left: 50%;
+   transform: translateX(-50%);
+   display: flex;
+   gap: 10px;
+   z-index: 2;
+}
+
+/* Botões indicadores */
+.indicator {
+   width: 12px;
+   height: 12px;
+   border-radius: 50%;
+   border: 2px solid white;
+   background: transparent;
+   cursor: pointer;
+   padding: 0;
+   transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Indicador do slide ativo */
+.indicator.active {
+   background: white;
+   transform: scale(1.2);
+}
+
+/* Hover nos indicadores */
+.indicator:hover {
+   background: rgba(255, 255, 255, 0.5);
+}

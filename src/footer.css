@@ -1,0 +1,55 @@
+/* container principal */
+.container_footer {
+    background-color: #36147D;
+    color: white;
+    padding: 30px 50px;
+
+    display: flex;
+    align-items: center;      /* centraliza verticalmente */
+    justify-content: center;  /* centraliza horizontalmente os elementos */
+    position: relative;       /* para posicionar a logo */
+}
+
+/* logo à esquerda (fixa) */
+.react-img {
+    position: absolute;
+    left: 35px;               /* mantém a logo encostada na esquerda */
+}
+
+.react-img img {
+    width: 70px;
+    height: auto;
+}
+
+/* links no centro */
+.links-footer {
+    display: flex;
+    justify-content: center;  /* centraliza os perfis no meio */
+    width: 100%;
+}
+
+.links-footer ul {
+    list-style: none;
+    display: flex;
+    gap: 50px;               /* espaço entre os perfis */
+    padding: 0;
+    margin: 0;
+}
+
+.links-footer a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: column;   /* ícone em cima, nome embaixo */
+    align-items: center;
+}
+
+.links-footer i {
+    font-size: 25px;
+    margin-bottom: 5px;
+    transition: color 0.3s;
+}
+
+.links-footer a:hover i {
+    color: #ff0000;
+}

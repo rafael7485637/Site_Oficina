@@ -1,0 +1,49 @@
+.nav {
+    display: flex;
+    justify-content: center;   /* Título centralizado */
+    align-items: center;
+    height: 100px;             /* Nav ficou maior e mais imponente */
+    padding: 0 40px;           /* Distância mais ampla nas laterais */
+    background-color: #36147D;
+    color: #fff;
+    position: relative;
+    border-bottom: 4px solid rgba(255,255,255,0.25);
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.25); /* efeito premium */
+}
+
+.nav h1 {
+    margin: 0;
+    font-size: 36px;          /* Título maior */
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.nav .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+
+    position: absolute;
+    right: 60px;              /* Ajustado proporcionalmente ao aumento */
+    gap: 25px;                /* Espaço adequado entre links */
+}
+
+.nav .menu li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 22px;          /* Links maiores */
+    padding: 10px 20px;       /* Hitbox maior */
+    border-radius: 10px;
+    font-weight: 500;
+    transition: all 0.25s ease;
+}
+
+/* Hover suavizado + moderno */
+.nav .menu li a:hover {
+    background-color: rgba(0,0,0,0.35);
+    transform: scale(1.12);     /* Cresce mais, mas ainda suave */
+    backdrop-filter: blur(3px); /* Efeito de vidro sutil */
+}

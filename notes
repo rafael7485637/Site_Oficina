@@ -1,0 +1,7 @@
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned --> iniciar o powershell com adm
+cd oficina_react --> selecionar a pasta do projeto
+npm run dev --> rodar o codigo
+
+git bash
+
+https://youtu.be/1FSmHr934OI?si=ET0EZESz8aFtxZJU
